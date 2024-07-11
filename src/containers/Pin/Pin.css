@@ -1,0 +1,48 @@
+.pin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.pin-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 166px;
+}
+
+.pin-window {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid grey;
+  margin-bottom: 15px;
+  height: 70px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 17px;
+  line-height: 1px;
+}
+
+.pin-wrapper-btn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pin-btn {
+  padding: 0;
+  height: 30px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.pin-btn:nth-child(10) {
+  order: 2;
+}
+.pin-btn:nth-child(11) {
+  order: 1;
+}
+.pin-btn:nth-child(12) {
+  order: 3;
+}
