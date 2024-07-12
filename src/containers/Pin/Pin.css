@@ -44,5 +44,25 @@
   order: 1;
 }
 .pin-btn:nth-child(12) {
+  order: 4;
+}
+.pin-btn:nth-child(13) {
   order: 3;
+}
+
+.pin-window.success {
+  border: 1px solid green;
+}
+
+.pin-window.error {
+  border: 1px solid red;
+}
+
+.pin-window.ok {
+  border: 1px solid grey;
+}
+
+.pin-message-inner {
+  height: 50px;
+  text-align: center;
 }

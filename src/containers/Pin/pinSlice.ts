@@ -2,10 +2,14 @@ import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 interface PinState {
   value: string;
+  color: string;
+  text: string;
 }
 
 const initialState: PinState = {
   value: '',
+  color: '',
+  text: '',
 };
 
 export const pinSlice = createSlice({
@@ -17,8 +21,26 @@ export const pinSlice = createSlice({
         state.value += action.payload;
       }
     },
-  }
+    deleteNum: (state: PinState) => {
+      state.value = state.value.slice(0, -1);
+    },
+    borderColor: (state, action: PayloadAction<string>) => {
+      state.color = action.payload;
+    },
+    messageInfo: (state, action: PayloadAction<string>) => {
+      state.text = action.payload;
+    },
+    resetValue: (state : PinState) => {
+      state.value = '';
+    },
+  },
 });
 
 export const pinReducer = pinSlice.reducer;
-export const {addNum} = pinSlice.actions;
+export const {
+  addNum,
+  deleteNum,
+  borderColor,
+  messageInfo,
+  resetValue,
+} = pinSlice.actions;
